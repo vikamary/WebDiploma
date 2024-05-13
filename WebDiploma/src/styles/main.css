@@ -10,6 +10,8 @@
 
 :root {
   --font-header: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 a, a:link, a:visited {
@@ -78,14 +80,14 @@ legend {
 
 header {
   padding: 16px 0;
-  width: 100%;
-  position: relative;
   background-image: url("/WebDiploma/src/img/wp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  position: relative;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 10;
 }
 header::after {
@@ -99,7 +101,7 @@ header::after {
           backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
-  margin-top: -63px;
+  margin-top: -100px;
 }
 header .header__wrapper {
   display: flex;
@@ -215,9 +217,202 @@ header .header__icon-number {
 .banner .banner__button:hover {
   background-color: #FC6383;
 }
+.arriavals__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.arriavals__title {
+  font-family: var(--font-poppins);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.4px;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.dot::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #6c7275;
+}
+.dot--active {
+  border: 1px solid #141718;
+}
+.dot--active::before {
+  background-color: #141718;
+}
+
+.card {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  width: 262px;
+}
+.card:hover .card__fave {
+  transform: translateY(0%);
+  opacity: 1;
+  pointer-events: all;
+}
+.card:hover .card__btn {
+  transform: translateY(0%);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.card__link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__pic {
+  position: relative;
+}
+
+.card__new {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 4px 14px;
+  background-color: #fff;
+  border-radius: 4px;
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.card__fave {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.btn-fav {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 8px 16px -8px rgba(15, 15, 15, 0.12);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in;
+  z-index: 10;
+}
+.btn-fav svg {
+  fill: #6C7275;
+  transition: all 0.2s ease-in;
+}
+.btn-fav:hover svg {
+  fill: #b92231;
+}
+
+.card__btn {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  right: 16px;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
+.card__desc {
+  display: grid;
+  gap: 4px;
+}
+
+.card__rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.card__title {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.card__price {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.arrivals__slider {
+  display: flex;
+  gap: 24px;
+}
+
+.container-right {
+  padding-left: calc((100% - 1184px) / 2 + 32px);
+}
+
 .container {
   max-width: 1184px;
   padding: 0 32px;
   margin: auto;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 56px;
+  max-width: 234px;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-inter);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  background-color: #141718;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.btn--small {
+  font-family: var(--font-inter);
+  padding: 9px 40px;
+  font-size: 16px;
+  line-height: 28px;
+}
+.btn--wide {
+  max-width: 230px;
   width: 100%;
 }/*# sourceMappingURL=main.css.map */

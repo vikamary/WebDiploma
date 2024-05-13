@@ -11,6 +11,8 @@
 
 :root {
   --font-header: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 a, a:link, a:visited  {
@@ -81,10 +83,41 @@ legend {
 
 @import "./header";
 @import "./banner";
+@import "./arriavals";
 
 .container {
   max-width: 1184px;
   padding: 0 32px;
   margin: auto;
   width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 56px;
+  max-width: 234px;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-inter);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  background-color: #141718;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  
+  &--small{
+    font-family: var(--font-inter);
+    padding: 9px 40px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  &--wide{
+    max-width: 230px;
+    width: 100%;
+  }
 }
