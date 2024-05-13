@@ -88,10 +88,6 @@ legend {
   padding: 0 32px;
   margin: auto;
   width: 100%;
-
-  @include tablet {
-    margin: 0 auto;
-  }
 }
 
 .btn {
