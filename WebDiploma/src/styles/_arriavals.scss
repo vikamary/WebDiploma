@@ -1,15 +1,13 @@
 .arrivals {
-  
-}
 
-.arriavals__wrapper {
+  .arrivals__wrapper {
   display: flex;
   justify-content: space-between;
   margin-top: 48px;
   margin-bottom: 48px;
 }
 
-.arriavals__title {
+.arrivals__title {
   font-family: var(--font-poppins);
   font-size: 40px;
   font-weight: 500;
@@ -133,8 +131,8 @@
   transition: all .2s ease-in;
 
   z-index: 10;
-
-  svg {
+  
+  svg{
 
     fill: #6C7275;
     transition: all .2s ease-in;
@@ -203,3 +201,5 @@ gap: 2px;
 .container-right{
     padding-left: calc((100% - 1184px) / 2 + 32px);
   }
+}
+
