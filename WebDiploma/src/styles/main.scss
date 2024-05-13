@@ -81,9 +81,7 @@ legend {
 	display: block;
 }
 
-@import "./header";
-@import "./banner";
-@import "./arriavals";
+/* Container & Button Default*/
 
 .container {
   max-width: 1184px;
@@ -121,3 +119,7 @@ legend {
     width: 100%;
   }
 }
+
+@import "./header";
+@import "./banner";
+@import "./bestseller";

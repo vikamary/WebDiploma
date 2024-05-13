@@ -78,6 +78,42 @@ legend {
   display: block;
 }
 
+/* Container & Button Default*/
+.container {
+  max-width: 1184px;
+  padding: 0 32px;
+  margin: auto;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 56px;
+  max-width: 234px;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-inter);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  background-color: #121212;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.btn--small {
+  font-family: var(--font-inter);
+  padding: 9px 40px;
+  font-size: 16px;
+  line-height: 28px;
+}
+.btn--wide {
+  max-width: 230px;
+  width: 100%;
+}
+
 header {
   padding: 16px 0;
   background-image: url("/WebDiploma/src/img/wp.jpg");
@@ -238,73 +274,49 @@ header .header__icon-number {
   color: #fff;
   box-shadow: 0px 0px 20px 0px #FC6383;
 }
-.arrivals .arrivals__wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 48px;
-  margin-bottom: 48px;
+.bestseller {
+  padding-bottom: 100px;
 }
-.arrivals .arrivals__title {
+
+.bestseller__title {
+  margin: 48px 0 48px;
   font-family: var(--font-poppins);
   font-size: 40px;
   font-weight: 500;
   line-height: 44px;
   letter-spacing: -0.4px;
 }
-.arrivals .dots {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+
+.bestseller__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 48px;
 }
-.arrivals .dot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-}
-.arrivals .dot::before {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #6c7275;
-}
-.arrivals .dot--active {
-  border: 1px solid #141718;
-}
-.arrivals .dot--active::before {
-  background-color: #141718;
-}
-.arrivals .card {
+
+.card {
   position: relative;
   display: grid;
   gap: 12px;
   width: 262px;
 }
-.arrivals .card:hover .card__fave {
+.card:hover .card__fave {
   transform: translateY(0%);
   opacity: 1;
   pointer-events: all;
 }
-.arrivals .card:hover .card__btn {
+.card:hover .card__btn {
   transform: translateY(0%);
   opacity: 1;
   pointer-events: all;
 }
-.arrivals .card__link {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.arrivals .card__pic {
+
+.card__pic {
   position: relative;
 }
-.arrivals .card__new {
+
+.card__new {
   position: absolute;
   top: 16px;
   left: 16px;
@@ -318,7 +330,8 @@ header .header__icon-number {
   color: var(--black);
   text-transform: uppercase;
 }
-.arrivals .card__fave {
+
+.card__fave {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -328,7 +341,16 @@ header .header__icon-number {
   pointer-events: none;
   z-index: 10;
 }
-.arrivals .btn-fav {
+
+.card__link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-fav {
   width: 32px;
   height: 32px;
   background-color: #fff;
@@ -341,14 +363,15 @@ header .header__icon-number {
   transition: all 0.2s ease-in;
   z-index: 10;
 }
-.arrivals .btn-fav svg {
+.btn-fav svg {
   fill: #6C7275;
   transition: all 0.2s ease-in;
 }
-.arrivals .btn-fav:hover svg {
+.btn-fav:hover svg {
   fill: #b92231;
 }
-.arrivals .card__btn {
+
+.card__btn {
   position: absolute;
   left: 16px;
   bottom: 16px;
@@ -358,66 +381,28 @@ header .header__icon-number {
   transform: translateY(50%);
   pointer-events: none;
 }
-.arrivals .card__desc {
+
+.card__desc {
   display: grid;
   gap: 4px;
 }
-.arrivals .card__rating {
+
+.card__rating {
   display: flex;
   align-items: center;
   gap: 2px;
 }
-.arrivals .card__title {
+
+.card__title {
   font-family: var(--font-inter);
   font-weight: 600;
   font-size: 16px;
   line-height: 26px;
 }
-.arrivals .card__price {
+
+.card__price {
   font-family: var(--font-inter);
   font-weight: 600;
   font-size: 14px;
   line-height: 22px;
-}
-.arrivals .arrivals__slider {
-  display: flex;
-  gap: 24px;
-}
-.arrivals .container-right {
-  padding-left: calc((100% - 1184px) / 2 + 32px);
-}
-
-.container {
-  max-width: 1184px;
-  padding: 0 32px;
-  margin: auto;
-  width: 100%;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 56px;
-  max-width: 234px;
-  width: 100%;
-  color: #fff;
-  text-decoration: none;
-  font-family: var(--font-inter);
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 32px;
-  letter-spacing: -0.4px;
-  background-color: #121212;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-}
-.btn--small {
-  font-family: var(--font-inter);
-  padding: 9px 40px;
-  font-size: 16px;
-  line-height: 28px;
-}
-.btn--wide {
-  max-width: 230px;
-  width: 100%;
 }/*# sourceMappingURL=main.css.map */
