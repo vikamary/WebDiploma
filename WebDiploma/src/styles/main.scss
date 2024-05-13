@@ -88,6 +88,10 @@ legend {
   padding: 0 32px;
   margin: auto;
   width: 100%;
+
+  @include tablet {
+    margin: 0 auto;
+  }
 }
 
 .btn {
@@ -119,6 +123,8 @@ legend {
     width: 100%;
   }
 }
+
+@import "./mixins";
 
 @import "./header";
 @import "./banner";

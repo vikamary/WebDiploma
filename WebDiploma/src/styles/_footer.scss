@@ -5,9 +5,19 @@
 
   background-color: #141718;
 
+  @include tablet{
+    padding: 50px 0;
+  }
+
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
+
+  @include tablet{
+    display: grid;
+    justify-content: center;
+    gap: 40px;
+  }
 }
 
 .footer__content-left {
@@ -15,6 +25,10 @@
   gap: 32px;
   /* position: relative; */
   align-items: center;
+
+  @include tablet{
+    justify-content: center;
+  }
 }
 
 .footer__logo {
@@ -54,7 +68,7 @@
 }
 
 .footer__content-right {
-
+  
 }
 
 .footer__nav {
@@ -88,6 +102,12 @@
 
     display: flex;
     justify-content: space-between;
+
+    @include tablet{
+      display: grid;
+      gap: 20px;
+      justify-content: center;
+    }
   }
 
   .footer__content{
@@ -113,11 +133,18 @@
 
     text-decoration: none;
 
+    @include tablet{
+      display: none;
+    }
   }
 
   .footer__nav-icons{
     display: flex;
     gap: 24px;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
 }

@@ -9,21 +9,42 @@
   font-weight: 500;
   line-height: 44px;
   letter-spacing: -0.4px;
+
+  @include tablet{
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: -0.6px;
+
+    margin: 40px 0 16px;
+
+      display: flex;
+      justify-content: center;
+
+  }
 }
 
 .bestseller__wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
   column-gap: 24px;
   row-gap: 48px;
+
+  @include tablet {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    column-gap: 8px;
+    row-gap: 10px;
+  
+  }
 }
 
 .card {
   position: relative;
   display: grid;
   gap: 12px;
-  width: 262px;
-
+  max-width: 262px;
+  width: 100%;
+  
   &:hover {
 
     .card__fave{
@@ -39,6 +60,7 @@
     }
   }
 }
+
   
 .card__pic {
   position: relative;
@@ -68,6 +90,7 @@
   transform: translateY(-50%);
   pointer-events: none;
   z-index: 10;
+
 }
 
 .card__link {
@@ -102,6 +125,10 @@
     fill: #b92231;
     }
   }
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .card__btn {
@@ -114,6 +141,10 @@
   opacity: 0;
   transform: translateY(50%);
   pointer-events: none;
+
+  @include tablet{
+    display: none;
+  }
 }
 
 .card__desc {
@@ -132,6 +163,15 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 26px;
+
+  @include tablet {
+    &--elipsis{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: nowrap;
+  }
+  }
+  
 }
 
 .card__price {
@@ -140,3 +180,18 @@
   font-size: 14px;
   line-height: 22px;
 }
+
+
+// @media (max-width: 768px) {
+//   .bestseller__wrapper {
+//     grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
+//     gap: 8px;
+//   }
+  
+// }
+
+// @media (max-width: 768px) {
+//   .card {
+//     width: auto;
+//   }
+// }
