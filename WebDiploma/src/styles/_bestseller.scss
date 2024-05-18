@@ -208,11 +208,11 @@
 	cursor: pointer;
 	transition: 0.2s ease-in;
 	text-align: center;
-}
 
-.items__control:hover {
+  &:hover{
     background: #eb5a1e;
     color: #FFF;
+  }
 }
 
 .items__current {

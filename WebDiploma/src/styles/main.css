@@ -533,7 +533,6 @@ header .header__icon-number {
   transition: 0.2s ease-in;
   text-align: center;
 }
-
 .items__control:hover {
   background: #eb5a1e;
   color: #FFF;
@@ -815,7 +814,7 @@ p {
   margin-bottom: 20px;
 }
 
-.card {
+.card-cart {
   margin: 100px auto 0;
   display: flex;
   flex-direction: column;
