@@ -845,7 +845,7 @@ p {
   border-radius: 4px;
 }
 
-.btn {
+.bttn {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -860,7 +860,7 @@ p {
   margin-bottom: 20px;
 }
 
-.btn-primary {
+.bttn-primary {
   color: #fff;
   background-color: #141718;
   border-color: #141718;
