@@ -1,0 +1,135 @@
+.card__title {
+  margin: 20px 0;
+
+  font-family: var(--font-inter);
+  font-weight: 600;
+}
+
+.cart-empty{
+  padding: 12px 20px;
+  margin-bottom: 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+
+  font-family: var(--font-inter);
+  font-weight: 300;
+}
+
+.cart__wrapper{
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 15px;
+
+}
+
+.cart-item__top{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-item__img {
+  max-width: 100px;
+  height: auto;
+}
+
+.cart-item__title {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cart-item__details{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.price__currency{
+  font-family: var(--font-inter);
+  font-weight: 500;
+}
+
+p{
+  font-family: var(--font-inter);
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.delivery-cost{
+  color: #3c3c3c;
+}
+
+.total-price,
+.rouble {
+  color: #121212;
+}
+
+.card-title{
+  margin: 20px 0;
+  font-family: var(--font-inter);
+  font-weight: 600;
+}
+
+.form-group{
+  margin-bottom: 20px;
+}
+.card {
+  margin: 100px auto 0;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: 4px;
+  padding: 0 30px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.border-top {
+  border-top: 1px solid #dee2e6;
+}
+
+.form-control {
+  width: 100%;
+  padding: 6px 12px;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 10px 12px;
+
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 4px;
+
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #141718;
+  border-color: #141718;
+}
