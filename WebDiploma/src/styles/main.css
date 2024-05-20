@@ -234,6 +234,32 @@ header .header__icon-number {
   font-family: var(--font-header);
 }
 
+.header__search {
+  display: flex;
+  gap: 10px;
+}
+
+.header__search-input {
+  display: none;
+}
+.header__search-input.active {
+  display: inline-block;
+  max-width: 170px;
+  width: 100%;
+  border: none;
+  color: #fff;
+  font-family: var(--font-header);
+  padding: 0 7px;
+}
+.header__search-input::-moz-placeholder {
+  font-family: var(--font-header);
+  color: #fff;
+}
+.header__search-input::placeholder {
+  font-family: var(--font-header);
+  color: #fff;
+}
+
 .banner {
   background-image: url("/WebDiploma/src/img/wp.jpg");
   background-repeat: no-repeat;

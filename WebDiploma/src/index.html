@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="container header__container">
       <div class="header__wrapper">
         <div class="header__wrapper--burgerlogo">
@@ -30,11 +30,15 @@
           </ul>
         </nav>
         <div class="header__icons">
-          <a href="#" class="header__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18.5 18.5L22 22M21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21C16.7467 21 21 16.7467 21 11.5Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-          </a>
+          <div class="header__search">
+            <a href="#" class="header__icon" id="searchIcon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5 18.5L22 22M21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21C16.7467 21 21 16.7467 21 11.5Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <input type="text" class="header__search-input" id="searchInput" placeholder="Search...">
+          </div>
+          
           <a href="#" class="header__icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18.5588 19.5488C17.5654 16.8918 15.0036 15 12 15C8.99638 15 6.4346 16.8918 5.44117 19.5488M18.5588 19.5488C20.6672 17.7154 22 15.0134 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 15.0134 3.33285 17.7154 5.44117 19.5488M18.5588 19.5488C16.8031 21.0756 14.5095 22 12 22C9.49052 22 7.19694 21.0756 5.44117 19.5488M15 9C15 10.6569 13.6569 12 12 12C10.3431 12 9 10.6569 9 9C9 7.34315 10.3431 6 12 6C13.6569 6 15 7.34315 15 9Z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
@@ -52,11 +56,6 @@
 
       </div>
     </div>
-    <!-- <div class="cart">
-      <h1>Card</h1>
-      <ul class="list-cards"></ul>
-      <div class="checkout"></div>
-    </div> -->
   </header>
 
   <section class="banner">

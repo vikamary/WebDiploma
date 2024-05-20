@@ -41,7 +41,7 @@ function renderProducts(productsArray) {
       <div class="card__rating" data-rating="${card.rating}">
         ${generateStarsIcons(card.rating)}
       </div>
-      <h4 class="card__title card__title--elipsis">${card.title}</h4>
+      <h4 class="card__title">${card.title}</h4>
       <div class="card__price">${card.price} BYN</div>
     </div>
       
@@ -79,21 +79,18 @@ function highlightStars(stars, index) {
     stars[i].src = "./img/star_empty.svg";
   }
 
-}
+};
 
-// Закрыть модальное окно
+
 function closeModal() {
   const modal = document.getElementById("modal");
   modal.style.display = "none";
 }
 
-// Получаем элемент крестика
 const closeButton = document.querySelector(".close");
 
-// Добавляем обработчик события для закрытия модального окна при клике на крестик
 closeButton.addEventListener("click", closeModal);
 
-// Открыть модальное окно с увеличенным изображением
 function openModal(imgSrc) {
   const modalImg = document.getElementById("modalImg");
   modalImg.src = imgSrc;
@@ -102,7 +99,6 @@ function openModal(imgSrc) {
   modal.style.display = "block";
 }
 
-// Обработчик события для открытия модального окна при клике на изображение товара
 function attachModalListeners() {
   const cardImgs = document.querySelectorAll(".card__img");
   cardImgs.forEach(img => {
@@ -112,23 +108,50 @@ function attachModalListeners() {
   });
 }
 
-// После рендеринга всех товаров, добавляем обработчики для модального окна
 async function getProducts() {
   const response = await fetch('./modules/products.json');
   const productsArray = await response.json();
   renderProducts(productsArray);
-  attachModalListeners(); // Добавляем обработчики после рендеринга товаров
+  attachModalListeners();
 }
 
-// Получаем элемент хедера
-const header = document.getElementById(".header");
 
-// Функция для установки стилей фона с размытием
+const header = document.getElementById("header");
+
 function setBlurredBackground() {
-    header.style.backgroundImage = "none"; // Удаляем фоновое изображение
-    header.style.backgroundColor = "rgba($color: #000000a4, $alpha: 0.3)"; // Устанавливаем прозрачный цвет фона
-    header.style.backdropFilter = "blur(10px)"; // Устанавливаем размытие фона
+    header.style.backdropFilter = "blur(10px)";
 }
 
-// Вызываем функцию для установки стилей фона с размытием
 setBlurredBackground();
+
+
+window.onload = function() {
+  const searchIcon = document.getElementById("searchIcon");
+  const searchInput = document.getElementById("searchInput");
+
+  if (searchIcon && searchInput) {
+      searchIcon.addEventListener("click", function(event) {
+          event.preventDefault();
+          searchInput.classList.toggle("active");
+          if (searchInput.classList.contains("active")) {
+              searchInput.focus();
+          } else {
+              searchInput.value = "";
+          }
+      });
+
+      searchInput.addEventListener("input", function() {
+          const searchText = searchInput.value.toLowerCase(); 
+          const itemsToSearch = document.querySelectorAll(".card");
+          itemsToSearch.forEach(item => {
+              const itemTitle = item.querySelector(".card__title").textContent.toLowerCase();
+              if (itemTitle.includes(searchText)) {
+                  item.style.display = "";
+                  item.scrollIntoView({ behavior: "smooth", block: "start" });
+              } else {
+                  item.style.display = "none";
+              }
+          });
+      });
+  }
+};

@@ -142,3 +142,26 @@ header {
   } 
 }
 
+.header__search{
+  display: flex;
+  gap: 10px;
+}
+
+.header__search-input {
+  display: none;
+
+  &.active {
+    display: inline-block;
+    max-width: 170px;
+    width: 100%;
+    border: none;
+    color: #fff;
+    font-family: var(--font-header);
+    padding: 0 7px;
+  }
+
+  &::placeholder{
+    font-family: var(--font-header);
+    color: #fff;
+  }
+}
