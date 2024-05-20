@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Six+Caps&family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Six+Caps&family=Space+Grotesk:wght@300..700&display=swap");
@@ -116,14 +117,10 @@ legend {
 
 header {
   padding: 16px 0;
-  background-image: url("/WebDiploma/src/img/wp.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   z-index: 10;
 }
 header::after {
@@ -135,7 +132,7 @@ header::after {
   height: 100%;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: -1;
   margin-top: -109px;
 }
@@ -193,7 +190,7 @@ header .nav__link::after {
   position: absolute;
   width: 0;
   left: 0;
-  bottom: -23px;
+  bottom: -25px;
   transition: 0.3s linear;
 }
 header .nav__link:hover {
@@ -866,11 +863,35 @@ p {
   border-color: #141718;
 }
 
-.cart {
+/* Стили для модального окна */
+.modal {
+  display: none;
   position: fixed;
+  z-index: 999;
+  left: 0;
   top: 0;
-  left: calc(100% - 500px);
-  width: 500px;
-  background-color: #fff;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 15, 0.347);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  overflow: auto;
+}
+
+.modal-content {
+  display: block;
+  margin: 100px auto;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+}
+
+.close {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

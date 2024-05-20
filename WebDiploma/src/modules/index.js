@@ -80,3 +80,55 @@ function highlightStars(stars, index) {
   }
 
 }
+
+// Закрыть модальное окно
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
+
+// Получаем элемент крестика
+const closeButton = document.querySelector(".close");
+
+// Добавляем обработчик события для закрытия модального окна при клике на крестик
+closeButton.addEventListener("click", closeModal);
+
+// Открыть модальное окно с увеличенным изображением
+function openModal(imgSrc) {
+  const modalImg = document.getElementById("modalImg");
+  modalImg.src = imgSrc;
+
+  const modal = document.getElementById("modal");
+  modal.style.display = "block";
+}
+
+// Обработчик события для открытия модального окна при клике на изображение товара
+function attachModalListeners() {
+  const cardImgs = document.querySelectorAll(".card__img");
+  cardImgs.forEach(img => {
+    img.addEventListener("click", function() {
+      openModal(img.src);
+    });
+  });
+}
+
+// После рендеринга всех товаров, добавляем обработчики для модального окна
+async function getProducts() {
+  const response = await fetch('./modules/products.json');
+  const productsArray = await response.json();
+  renderProducts(productsArray);
+  attachModalListeners(); // Добавляем обработчики после рендеринга товаров
+}
+
+// Получаем элемент хедера
+const header = document.getElementById(".header");
+
+// Функция для установки стилей фона с размытием
+function setBlurredBackground() {
+    header.style.backgroundImage = "none"; // Удаляем фоновое изображение
+    header.style.backgroundColor = "rgba($color: #000000a4, $alpha: 0.3)"; // Устанавливаем прозрачный цвет фона
+    header.style.backdropFilter = "blur(10px)"; // Устанавливаем размытие фона
+}
+
+// Вызываем функцию для установки стилей фона с размытием
+setBlurredBackground();
