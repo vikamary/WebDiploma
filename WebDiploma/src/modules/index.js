@@ -38,8 +38,8 @@ function renderProducts(productsArray) {
         </div>
     </div>
     <div class="card__desc">
-      <div class="card__rating">
-        ${ratingStarsHTML}
+      <div class="card__rating" data-rating="${card.rating}">
+        ${generateStarsIcons(card.rating)}
       </div>
       <h4 class="card__title card__title--elipsis">${card.title}</h4>
       <div class="card__price">${card.price} BYN</div>
@@ -49,4 +49,34 @@ function renderProducts(productsArray) {
                           </article>`;
     productsContainer.insertAdjacentHTML('beforeend', productHTML);
   });
+}
+
+function generateStarsIcons(rating) {
+  let starsHTML = '';
+  for (let i = 0; i < 5; i++) {
+    if (i < rating) {
+      starsHTML += '<img class="star" src="./img/filled_star.svg" alt="filled">';
+    } else {
+      starsHTML += '<img class="star" src="./img/star_empty.svg" alt="empty">';
+    }
+  }
+  return starsHTML;
+}
+
+document.addEventListener('mouseover', function(event) {
+  if (event.target.classList.contains('star')) {
+    const stars = event.target.parentElement.children;
+    const starIndex = Array.from(stars).indexOf(event.target);
+    highlightStars(stars, starIndex);
+  }
+});
+
+function highlightStars(stars, index) {
+  for (let i = 0; i <= index; i++){
+    stars[i].src = "./img/filled_star.svg";
+  }
+  for (let i = index + 1; i < stars.length; i++) {
+    stars[i].src = "./img/star_empty.svg";
+  }
+
 }
