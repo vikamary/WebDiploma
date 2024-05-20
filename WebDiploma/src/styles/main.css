@@ -863,4 +863,13 @@ p {
   color: #fff;
   background-color: #141718;
   border-color: #141718;
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  left: calc(100% - 500px);
+  width: 500px;
+  background-color: #fff;
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

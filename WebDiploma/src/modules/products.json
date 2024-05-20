@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "ABBA – &nbsp;The Gold Edition",
+    "imgSrc": "ABBA.png",
+    "price": 200,
+    "status": "new",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "title": "The Weeknd – &nbsp;Dawn FM",
+    "imgSrc": "DownFM.png",
+    "price": 199,
+    "status": "hot",
+    "rating": 4
+  },
+  {
+    "id": 3,
+    "title": "Imagine Dragons – &nbsp;Evolve",
+    "imgSrc": "Dragons.png",
+    "price": 189,
+    "status": "hot",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "title": "Arctic Monkeys - &nbsp;AM",
+    "imgSrc": "monkeys.png",
+    "price": 169,
+    "status": "hot",
+    "rating": 4
+  }
+]

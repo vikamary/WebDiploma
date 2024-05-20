@@ -127,3 +127,13 @@ legend {
 @import "./bestseller";
 @import "./footer";
 @import "./_cart";
+
+.cart{
+  position: fixed;
+  top: 0;
+  left: calc(100% - 500px);
+  width: 500px;
+  background-color: #fff;
+  height: 100vh;
+  
+}
