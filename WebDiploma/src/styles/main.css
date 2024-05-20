@@ -443,13 +443,14 @@ header .header__icon-number {
   justify-content: center;
   transition: all 0.2s ease-in;
   z-index: 10;
+  transition: all 0.2s ease-in;
 }
 .btn-fav svg {
   fill: #6C7275;
   transition: all 0.2s ease-in;
 }
 .btn-fav:hover svg {
-  fill: #b92231;
+  fill: #CD3030;
 }
 @media (max-width: 768px) {
   .btn-fav {

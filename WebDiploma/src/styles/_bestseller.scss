@@ -113,6 +113,8 @@
   justify-content: center;
   transition: all .2s ease-in;
   z-index: 10;
+  transition: all .2s ease-in;
+
   
   svg {
     fill: #6C7275;
@@ -122,7 +124,7 @@
   &:hover {
 
   svg {
-    fill: #b92231;
+    fill: #CD3030;
     }
   }
 
