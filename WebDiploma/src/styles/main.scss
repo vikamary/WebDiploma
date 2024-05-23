@@ -120,14 +120,6 @@ legend {
   }
 }
 
-@import "./mixins";
-
-@import "./header";
-@import "./banner";
-@import "./bestseller";
-@import "./footer";
-@import "./_cart";
-
 /* Стили для модального окна */
 .modal {
   display: none;
@@ -159,3 +151,12 @@ legend {
   right: 25px;
   cursor: pointer;
 }
+
+@import "./mixins";
+
+@import "./header";
+@import "./banner";
+@import "./bestseller";
+@import "./footer";
+@import "./_cart";
+// @import "./summary";
